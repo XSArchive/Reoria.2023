@@ -3,8 +3,8 @@
 /// <summary>
 /// Stores values of <typeparamref name="TValue"/> in an array using the values of <typeparamref name="TEnum"/> as the array keys.
 /// </summary>
-/// <typeparam name="TEnum"></typeparam>
-/// <typeparam name="TValue"></typeparam>
+/// <typeparam name="TEnum">The enumeration to use as the array keyring.</typeparam>
+/// <typeparam name="TValue">The type of the values being stored.</typeparam>
 [Serializable]
 public class EnumeratedValue<TEnum, TValue> where TEnum: Enum
 {
