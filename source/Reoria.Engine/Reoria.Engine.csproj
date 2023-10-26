@@ -1,15 +1,20 @@
-<Project Sdk="Godot.NET.Sdk/4.1.2">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+    <BaseOutputPath>$(SolutionDir)lib\$(AssemblyName)</BaseOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
     <Title>$(AssemblyName)</Title>
     <Authors>XerShade</Authors>
     <Company>XerShade's Corner</Company>
     <Product>Reoria</Product>
-    <Description>The Godot library for Reoria.</Description>
+    <Description>The framework and logic library for Reoria.</Description>
     <Copyright>© $(Authors) 2023 - 2023</Copyright>
 
     <RepositoryUrl>https://github.com/XerShade/Reoria</RepositoryUrl>
@@ -17,7 +22,7 @@
 
     <PackageProjectUrl>https://github.com/XerShade/Reoria</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>reoria,library,godot</PackageTags>
+    <PackageTags>reoria,library,engine,core,framework,logic</PackageTags>
     <PackageOutputPath>$(SolutionDir)pkg\$(AssemblyName)</PackageOutputPath>
 
     <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
@@ -57,9 +62,5 @@
       <PackagePath>content</PackagePath>
     </None>
   </ItemGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="..\Reoria.Engine\Reoria.Engine.csproj" />
-    <ProjectReference Include="..\Reoria.Game\Reoria.Game.csproj" />
-  </ItemGroup>
+
 </Project>
