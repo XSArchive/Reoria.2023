@@ -27,7 +27,7 @@ public class EnumeratedValue<TEnum, TValue> where TEnum: Enum
     public EnumeratedValue()
     {
         // Generate and store a list of the values in the enumeration.
-        var _enumValues = Enum.GetValues(typeof(TEnum)).Cast<TEnum>();
+        IEnumerable<TEnum> _enumValues = Enum.GetValues(typeof(TEnum)).Cast<TEnum>();
 
         // Generate the value array.
         this.lower = Convert.ToInt32(_enumValues.Min());
@@ -42,20 +42,36 @@ public class EnumeratedValue<TEnum, TValue> where TEnum: Enum
     /// <returns>The value in the array at the specified key.</returns>
     public TValue this[TEnum key]
     {
-        get { return GetValue(key); }
-        set { SetValue(key, value); }
+        get => this.GetValue(key);
+        set => this.SetValue(key, value);
     }
+
+    /// <summary>
+    /// Converts an <see cref="Enum"/> value to an array key.
+    /// </summary>
+    /// <param name="key">The <see cref="Enum"/> value to convert to an array key.</param>
+    /// <returns>The array key.</returns>
+    protected int ConvertEnumToKey(TEnum key) =>
+        // Remove the lower bound of the enum and return the value.
+        Convert.ToInt32(key) - this.lower;
+
+    /// <summary>
+    /// Stores the value in the array at the specified key.
+    /// </summary>
+    /// <param name="key">The <see cref="Enum"/> value to use as the array key.</param>
+    /// <param name="value">The value to store the value in the array at the specified key.</param>
+    public virtual void SetValue(TEnum key, TValue value) =>
+        // Store the value in the array at the specified key.
+        this.values[this.ConvertEnumToKey(key)] = value;
 
     /// <summary>
     /// Returns the value in the array at the specified key.
     /// </summary>
     /// <param name="key">The <see cref="Enum"/> value to use as the array key.</param>
     /// <returns>The value in the array at the specified key.</returns>
-    public virtual TValue GetValue(TEnum key)
-    {
+    public virtual TValue GetValue(TEnum key) =>
         // Return the value in the array at the specified key.
-        return this.values[this.ConvertEnumToKey(key)];
-    }
+        this.values[this.ConvertEnumToKey(key)];
 
     /// <summary>
     /// Returns the value in the array at the specified key, or the default value if no value exists in the array.
@@ -71,27 +87,5 @@ public class EnumeratedValue<TEnum, TValue> where TEnum: Enum
 
         // Return the value in the array at the specified key, or the default value if no value exists in the array.
         return this.values[this.ConvertEnumToKey(key)] ?? defaultValue;
-    }
-
-    /// <summary>
-    /// Stores the value in the array at the specified key.
-    /// </summary>
-    /// <param name="key">The <see cref="Enum"/> value to use as the array key.</param>
-    /// <param name="value">The value to store the value in the array at the specified key.</param>
-    public virtual void SetValue(TEnum key, TValue value)
-    {
-        // Store the value in the array at the specified key.
-        this.values[this.ConvertEnumToKey(key)] = value;
-    }
-
-    /// <summary>
-    /// Converts an <see cref="Enum"/> value to an array key.
-    /// </summary>
-    /// <param name="key">The <see cref="Enum"/> value to convert to an array key.</param>
-    /// <returns>The array key.</returns>
-    protected int ConvertEnumToKey(TEnum key)
-    {
-        // Remove the lower bound of the enum and return the value.
-        return Convert.ToInt32(key) - this.lower;
     }
 }
