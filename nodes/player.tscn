@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://mun88n6llppx"]
+[gd_scene load_steps=3 format=3 uid="uid://mun88n6llppx"]
 
 [ext_resource type="Texture2D" uid="uid://cdxppw2383ihe" path="res://assets/graphics/actors/timefantasy/$tf_template.png" id="1_eh7n2"]
+[ext_resource type="Script" path="res://nodes/player.gd" id="1_p73vu"]
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_p73vu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_eh7n2")
