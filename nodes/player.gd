@@ -14,18 +14,12 @@ func handle_player_input() -> Vector2:
 func update_animation(input_vector: Vector2, is_sprinting: bool) -> void:
 	state = "Idle"
 	
-	if(input_vector.x < 0): 
+	if(input_vector.y != 0): 
 		state = "Walking" 
-		direction = "Left"
-	if(input_vector.x > 0): 
+		direction = "Up" if input_vector.y < 0 else "Down"
+	elif(input_vector.x != 0): 
 		state = "Walking" 
-		direction = "Right"
-	if(input_vector.y < 0): 
-		state = "Walking" 
-		direction = "Up"
-	if(input_vector.y > 0): 
-		state = "Walking" 
-		direction = "Down"
+		direction = "Left" if input_vector.x < 0 else "Right"
 	
 	animation_player.play(state + "_" + direction, -1, (2 if is_sprinting else 1) )
 
