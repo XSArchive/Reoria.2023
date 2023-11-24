@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://doksqgee4cd0c" path="res://nodes/mob.tscn" id="2_cfa2f"]
 
 [node name="Development Environment" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_qsil6")]
 position = Vector2(128, 96)
