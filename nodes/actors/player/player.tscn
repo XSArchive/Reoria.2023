@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://kq4pti4b4yuv"]
+
+[ext_resource type="PackedScene" uid="uid://tmmhbr2g45ah" path="res://nodes/actors/actor_base.tscn" id="1_d6rmw"]
+[ext_resource type="Texture2D" uid="uid://ctt8mpeudh3c6" path="res://assets/graphics/actors/timefantasy/chara1-0.png" id="2_a5clo"]
+
+[node name="Player" instance=ExtResource("1_d6rmw")]
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_a5clo")

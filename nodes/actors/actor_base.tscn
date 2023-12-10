@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tmmhbr2g45ah"]
+
+[ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://assets/graphics/actors/timefantasy/$tf_template.png" id="1_cxxxg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m1dg"]
+radius = 8.0
+
+[node name="ActorBase" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_8m1dg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cxxxg")
+hframes = 3
+vframes = 4
+frame = 1
