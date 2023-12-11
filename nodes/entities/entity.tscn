@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpimk7q8w2yji"]
+
+[ext_resource type="Script" path="res://source/nodes/entities/Entity.cs" id="1_hyrha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1uoft"]
+radius = 8.0
+
+[node name="Entity" type="CharacterBody2D"]
+script = ExtResource("1_hyrha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1uoft")
+disabled = true

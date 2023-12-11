@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://601s7gbg8osi"]
+[gd_scene load_steps=3 format=3 uid="uid://601s7gbg8osi"]
 
-[ext_resource type="PackedScene" uid="uid://kq4pti4b4yuv" path="res://nodes/actors/player/player.tscn" id="1_l0bb1"]
+[ext_resource type="PackedScene" uid="uid://cvof3kqgeqaq4" path="res://nodes/entities/actors/players/player.tscn" id="1_qdwbo"]
+[ext_resource type="PackedScene" uid="uid://dtxvqpxffgfwt" path="res://nodes/entities/actors/mobs/mob.tscn" id="2_i4h40"]
 
 [node name="Development Environment" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_l0bb1")]
-position = Vector2(128, 96)
+[node name="Player" parent="." instance=ExtResource("1_qdwbo")]
+position = Vector2(97, 77)
+
+[node name="Mob" parent="." instance=ExtResource("2_i4h40")]
+position = Vector2(181, 106)
+
+[node name="Mob2" parent="." instance=ExtResource("2_i4h40")]
+position = Vector2(43, 109)
+
+[node name="MovementProcessor" parent="Mob2" index="2"]
+Speed = 8.0
+
+[node name="Mob3" parent="." instance=ExtResource("2_i4h40")]
+position = Vector2(144, 29)
+
+[node name="MovementProcessor" parent="Mob3" index="2"]
+Speed = 24.0
+
+[editable path="Mob"]
+[editable path="Mob2"]
+[editable path="Mob3"]
