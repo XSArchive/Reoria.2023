@@ -8,6 +8,8 @@
 
 [node name="Actor" instance=ExtResource("1_aqt2q")]
 script = ExtResource("2_ypqkr")
+State = 1
+Direction = 2
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, 8)

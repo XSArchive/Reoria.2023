@@ -6,6 +6,8 @@
 
 [node name="Player" instance=ExtResource("1_dwqr2")]
 script = ExtResource("2_qkny0")
+State = 1
+Direction = 2
 
 [node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_gahfh")
