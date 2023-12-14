@@ -7,14 +7,14 @@ namespace Reoria.Nodes.Entities.Actors;
 public partial class ActorMovementProcessor : Node2D
 {
     [Export]
-    public Actor Parent { get; private set; }
+    public new Actor Owner { get; private set; }
     [Export]
     public Vector2 Input = Vector2.Zero;
     [Export]
     public float Speed = 16f;
     public override void _Ready()
     {
-        this.Parent = this.GetOwner<Actor>();
+        this.Owner = this.GetOwner<Actor>();
         this.Input = Vector2.Zero;
 
         base._Ready();
@@ -22,19 +22,19 @@ public partial class ActorMovementProcessor : Node2D
 
     public override void _PhysicsProcess(double delta)
     {
-        this.Parent.Velocity = this.Input * this.Speed;
+        this.Owner.Velocity = this.Input * this.Speed;
 
-        this.Parent.State = ActorState.Idle;
+        this.Owner.State = ActorState.Idle;
 
-        if (this.Parent.Velocity != Vector2.Zero)
+        if (this.Owner.Velocity != Vector2.Zero)
         {
-            this.Parent.State = ActorState.Moving;
-            this.Parent.Direction = CalculateDirectionFromVector2(this.Parent.Velocity);
+            this.Owner.State = ActorState.Moving;
+            this.Owner.Direction = CalculateDirectionFromVector2(this.Owner.Velocity);
 
-            _ = this.Parent.MoveAndSlide();
+            _ = this.Owner.MoveAndSlide();
         }
 
-        this.Parent.AnimationPlayer.Play($"actor_animations/{this.Parent.State}_{this.Parent.Direction}".ToLower(), 0, this.Speed / 16f * 2);
+        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.State}_{this.Owner.Direction}".ToLower(), 0, this.Speed / 16f * 2);
 
         base._PhysicsProcess(delta);
     }
