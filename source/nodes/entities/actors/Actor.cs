@@ -1,4 +1,6 @@
 using Godot;
+using Reoria.Enumerations;
+using Reoria.Enumerations.Nodes.Entities.Actors;
 
 namespace Reoria.Nodes.Entities.Actors;
 
@@ -10,6 +12,11 @@ public partial class Actor : Entity
 	public AnimationPlayer AnimationPlayer { get; private set; }
 	[Export]
 	public ActorMovementProcessor MovementProcessor { get; private set; }
+
+	[Export]
+	public ActorState State = ActorState.Idle;
+	[Export]
+	public Direction Direction = Direction.Down;
 
 	public override void _Ready()
 	{

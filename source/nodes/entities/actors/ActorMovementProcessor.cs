@@ -1,5 +1,5 @@
 ﻿using Godot;
-using Reoria.Enumerations;
+using Reoria.Enumerations.Nodes.Entities.Actors;
 using static Reoria.Extensions.Enumerations.DirectionExtensions;
 
 namespace Reoria.Nodes.Entities.Actors;
@@ -12,11 +12,6 @@ public partial class ActorMovementProcessor : Node2D
     public Vector2 Input = Vector2.Zero;
     [Export]
     public float Speed = 16f;
-
-    [Export]
-    private string state = "idle";
-    [Export]
-    private Direction direction = Direction.Down;
     public override void _Ready()
     {
         this.Parent = this.GetOwner<Actor>();
@@ -29,17 +24,17 @@ public partial class ActorMovementProcessor : Node2D
     {
         this.Parent.Velocity = this.Input * this.Speed;
 
-        this.state = "idle";
+        this.Parent.State = ActorState.Idle;
 
         if (this.Parent.Velocity != Vector2.Zero)
         {
-            this.state = "moving";
-            this.direction = CalculateDirectionFromVector2(this.Parent.Velocity);
+            this.Parent.State = ActorState.Moving;
+            this.Parent.Direction = CalculateDirectionFromVector2(this.Parent.Velocity);
 
             _ = this.Parent.MoveAndSlide();
         }
 
-        this.Parent.AnimationPlayer.Play($"actor_animations/{this.state}_{this.direction}".ToLower(), 0, this.Speed / 16f * 2);
+        this.Parent.AnimationPlayer.Play($"actor_animations/{this.Parent.State}_{this.Parent.Direction}".ToLower(), 0, this.Speed / 16f * 2);
 
         base._PhysicsProcess(delta);
     }
