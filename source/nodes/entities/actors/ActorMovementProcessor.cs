@@ -11,6 +11,10 @@ public partial class ActorMovementProcessor : Node2D
     [Export]
     public float Speed = 16f;
 
+    [Export]
+    private string state = "idle";
+    [Export]
+    private string direction = "down";
     public override void _Ready()
     {
         this.Parent = this.GetOwner<Actor>();
@@ -23,10 +27,21 @@ public partial class ActorMovementProcessor : Node2D
     {
         this.Parent.Velocity = this.Input * this.Speed;
 
+        this.state = "idle";
+
         if (this.Parent.Velocity != Vector2.Zero)
         {
+            this.state = "moving";
+
+            if (this.Parent.Velocity.X < 0) { this.direction = "left"; }
+            if (this.Parent.Velocity.X > 0) { this.direction = "right"; }
+            if (this.Parent.Velocity.Y < 0) { this.direction = "up"; }
+            if (this.Parent.Velocity.Y > 0) { this.direction = "down"; }
+
             _ = this.Parent.MoveAndSlide();
         }
+
+        this.Parent.AnimationPlayer.Play($"actor_animations/{this.state}_{this.direction}", 0, this.Speed / 16f * 2);
 
         base._PhysicsProcess(delta);
     }
