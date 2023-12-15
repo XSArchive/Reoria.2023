@@ -1,4 +1,5 @@
 using Godot;
+using Reoria.Data.Entities.Actors;
 using Reoria.Enumerations;
 using Reoria.Enumerations.Nodes.Entities.Actors;
 
@@ -6,7 +7,9 @@ namespace Reoria.Nodes.Entities.Actors;
 
 public partial class Actor : Entity
 {
-	[Export]
+    [Export]
+    public new ActorData Data { get; private set; }
+    [Export]
 	public Sprite2D Sprite { get; private set; }
 	[Export]
 	public AnimationPlayer AnimationPlayer { get; private set; }
@@ -19,8 +22,9 @@ public partial class Actor : Entity
 	public Direction Direction = Direction.Down;
 
 	public override void _Ready()
-	{
-		this.Sprite = this.GetNode<Sprite2D>("Sprite2D");
+    {
+        this.Data ??= this.GetNode<ActorData>("Data");
+        this.Sprite = this.GetNode<Sprite2D>("Sprite2D");
 		this.AnimationPlayer = this.GetNode<AnimationPlayer>("AnimationPlayer"); 
 		this.MovementProcessor = this.GetNode<ActorMovementProcessor>("MovementProcessor");
 

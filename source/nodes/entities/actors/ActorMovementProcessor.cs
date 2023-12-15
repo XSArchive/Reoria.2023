@@ -10,8 +10,7 @@ public partial class ActorMovementProcessor : Node2D
     public new Actor Owner { get; private set; }
     [Export]
     public Vector2 Input = Vector2.Zero;
-    [Export]
-    public float Speed = 16f;
+
     public override void _Ready()
     {
         this.Owner = this.GetOwner<Actor>();
@@ -22,7 +21,7 @@ public partial class ActorMovementProcessor : Node2D
 
     public override void _PhysicsProcess(double delta)
     {
-        this.Owner.Velocity = this.Input * this.Speed;
+        this.Owner.Velocity = this.Input * this.Owner.Data.MovementSpeed;
 
         this.Owner.State = ActorState.Idle;
 
@@ -34,7 +33,7 @@ public partial class ActorMovementProcessor : Node2D
             _ = this.Owner.MoveAndSlide();
         }
 
-        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.State}_{this.Owner.Direction}".ToLower(), 0, this.Speed / 16f * 2);
+        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.State}_{this.Owner.Direction}".ToLower(), 0, this.Owner.Data.MovementSpeed / 16f * 2);
 
         base._PhysicsProcess(delta);
     }

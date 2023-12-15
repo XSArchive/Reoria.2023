@@ -6,30 +6,22 @@
 [node name="Development Environment" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_qdwbo")]
-position = Vector2(97, 77)
-State = 1
-Direction = 2
+position = Vector2(114, 69)
 
 [node name="Mob" parent="." instance=ExtResource("2_i4h40")]
-position = Vector2(181, 106)
-State = 1
-Direction = 2
+position = Vector2(54, 99)
 
 [node name="Mob2" parent="." instance=ExtResource("2_i4h40")]
-position = Vector2(43, 109)
-State = 1
-Direction = 2
+position = Vector2(181, 58)
 
-[node name="MovementProcessor" parent="Mob2" index="2"]
-Speed = 8.0
+[node name="Data" parent="Mob2" index="0"]
+MovementSpeed = 8.0
 
 [node name="Mob3" parent="." instance=ExtResource("2_i4h40")]
-position = Vector2(144, 29)
-State = 1
-Direction = 2
+position = Vector2(91, 21)
 
-[node name="MovementProcessor" parent="Mob3" index="2"]
-Speed = 24.0
+[node name="Data" parent="Mob3" index="0"]
+MovementSpeed = 24.0
 
 [editable path="Mob"]
 [editable path="Mob2"]

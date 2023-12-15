@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch1f8cp4ydop3"]
+[gd_scene load_steps=7 format=3 uid="uid://ch1f8cp4ydop3"]
 
 [ext_resource type="PackedScene" uid="uid://bpimk7q8w2yji" path="res://nodes/entities/entity.tscn" id="1_aqt2q"]
 [ext_resource type="Script" path="res://source/nodes/entities/actors/ActorMovementProcessor.cs" id="2_881bb"]
 [ext_resource type="Script" path="res://source/nodes/entities/actors/Actor.cs" id="2_ypqkr"]
 [ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://assets/graphics/actors/timefantasy/$tf_template.png" id="3_173ve"]
+[ext_resource type="Script" path="res://source/data/entities/actors/ActorData.cs" id="3_oue1y"]
 [ext_resource type="AnimationLibrary" uid="uid://bcw1ptjmuj4tn" path="res://data/animations/actor_animations.res" id="5_5a0jr"]
 
 [node name="Actor" instance=ExtResource("1_aqt2q")]
@@ -11,9 +12,9 @@ script = ExtResource("2_ypqkr")
 State = 1
 Direction = 2
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, 8)
-disabled = false
+[node name="Data" parent="." index="0"]
+script = ExtResource("3_oue1y")
+MovementSpeed = 16.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]
 texture = ExtResource("3_173ve")
@@ -28,3 +29,7 @@ script = ExtResource("2_881bb")
 libraries = {
 "actor_animations": ExtResource("5_5a0jr")
 }
+
+[node name="CollisionShape2D" parent="." index="4"]
+position = Vector2(0, 8)
+disabled = false
