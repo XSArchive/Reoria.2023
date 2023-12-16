@@ -1,10 +1,11 @@
 ﻿using Godot;
 using Reoria.Enumerations.Nodes.Entities.Actors;
+using Reoria.Nodes.Entities.Actors;
 using static Reoria.Extensions.Enumerations.DirectionExtensions;
 
-namespace Reoria.Nodes.Entities.Actors;
+namespace Reoria.Logic.Entities.Actors;
 
-public partial class ActorMovementProcessor : Node2D
+public partial class ActorMovementLogic : Node2D
 {
     [Export]
     public new Actor Owner { get; private set; }

@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ch1f8cp4ydop3"]
+[gd_scene load_steps=8 format=3 uid="uid://ch1f8cp4ydop3"]
 
 [ext_resource type="PackedScene" uid="uid://bpimk7q8w2yji" path="res://nodes/entities/entity.tscn" id="1_aqt2q"]
-[ext_resource type="Script" path="res://source/nodes/entities/actors/ActorMovementProcessor.cs" id="2_881bb"]
 [ext_resource type="Script" path="res://source/nodes/entities/actors/Actor.cs" id="2_ypqkr"]
 [ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://assets/graphics/actors/timefantasy/$tf_template.png" id="3_173ve"]
 [ext_resource type="Script" path="res://source/data/entities/actors/ActorData.cs" id="3_oue1y"]
+[ext_resource type="Script" path="res://source/logic/entities/actors/ActorLogic.cs" id="4_lhjxb"]
 [ext_resource type="AnimationLibrary" uid="uid://bcw1ptjmuj4tn" path="res://data/animations/actor_animations.res" id="5_5a0jr"]
+[ext_resource type="Script" path="res://source/logic/entities/actors/ActorMovementLogic.cs" id="5_bqxgr"]
 
 [node name="Actor" instance=ExtResource("1_aqt2q")]
 script = ExtResource("2_ypqkr")
@@ -16,20 +17,23 @@ Direction = 2
 script = ExtResource("3_oue1y")
 MovementSpeed = 16.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+[node name="Logic" parent="." index="1"]
+script = ExtResource("4_lhjxb")
+
+[node name="Movement" type="Node2D" parent="Logic" index="0"]
+script = ExtResource("5_bqxgr")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 8)
+disabled = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture = ExtResource("3_173ve")
 hframes = 3
 vframes = 4
 frame = 1
 
-[node name="MovementProcessor" type="Node2D" parent="." index="2"]
-script = ExtResource("2_881bb")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 libraries = {
 "actor_animations": ExtResource("5_5a0jr")
 }
-
-[node name="CollisionShape2D" parent="." index="4"]
-position = Vector2(0, 8)
-disabled = false
