@@ -6,15 +6,10 @@
 
 [node name="Mob" instance=ExtResource("1_cx4un")]
 script = ExtResource("2_7fiaf")
-State = null
-Direction = null
 
 [node name="Data" parent="." index="0"]
-GuidString = ""
-Position = Vector2(0, 0)
-
-[node name="Movement" parent="Logic" index="0"]
-Input = null
+State = 1
+Direction = 2
 
 [node name="Sprite2D" parent="." index="3"]
 texture = ExtResource("3_f87gj")

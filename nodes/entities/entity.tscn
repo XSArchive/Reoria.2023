@@ -12,8 +12,6 @@ script = ExtResource("1_hyrha")
 
 [node name="Data" type="Node" parent="."]
 script = ExtResource("2_hnnt2")
-GuidString = null
-Position = null
 
 [node name="Logic" type="Node" parent="."]
 script = ExtResource("3_0v2jj")

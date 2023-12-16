@@ -7,38 +7,44 @@
 
 [node name="Player" parent="." instance=ExtResource("1_qdwbo")]
 position = Vector2(65, 47)
-State = null
-Direction = null
 
 [node name="Mob" parent="." instance=ExtResource("2_i4h40")]
 position = Vector2(164, 103)
-State = null
-Direction = null
+
+[node name="Data" parent="Mob" index="0"]
+State = 1
+Direction = 2
+GuidString = ""
+Position = Vector2(0, 0)
 
 [node name="Movement" parent="Mob/Logic" index="0"]
-Input = null
+Input = Vector2(0, 0)
 
 [node name="Mob2" parent="." instance=ExtResource("2_i4h40")]
 position = Vector2(47, 103)
-State = null
-Direction = null
 
 [node name="Data" parent="Mob2" index="0"]
+State = 1
+Direction = 2
 MovementSpeed = 8.0
+GuidString = ""
+Position = Vector2(0, 0)
 
 [node name="Movement" parent="Mob2/Logic" index="0"]
-Input = null
+Input = Vector2(0, 0)
 
 [node name="Mob3" parent="." instance=ExtResource("2_i4h40")]
 position = Vector2(134, 31)
-State = null
-Direction = null
 
 [node name="Data" parent="Mob3" index="0"]
+State = 1
+Direction = 2
 MovementSpeed = 32.0
+GuidString = ""
+Position = Vector2(0, 0)
 
 [node name="Movement" parent="Mob3/Logic" index="0"]
-Input = null
+Input = Vector2(0, 0)
 
 [editable path="Mob"]
 [editable path="Mob2"]

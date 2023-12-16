@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Godot;
+using System;
 using System.Collections.Generic;
 
 namespace Reoria.Data.Types;
 
-public abstract class EnumeratedType<TEnum, TValue> where TEnum : Enum
+public abstract partial class EnumeratedType<TEnum, TValue> : Node where TEnum : Enum
 {
     private readonly Dictionary<TEnum, TValue> values;
 

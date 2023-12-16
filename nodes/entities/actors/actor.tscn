@@ -10,11 +10,11 @@
 
 [node name="Actor" instance=ExtResource("1_aqt2q")]
 script = ExtResource("2_ypqkr")
-State = null
-Direction = null
 
 [node name="Data" parent="." index="0"]
 script = ExtResource("3_oue1y")
+State = 1
+Direction = 2
 MovementSpeed = 16.0
 
 [node name="Logic" parent="." index="1"]
@@ -22,7 +22,6 @@ script = ExtResource("4_lhjxb")
 
 [node name="Movement" type="Node2D" parent="Logic" index="0"]
 script = ExtResource("5_bqxgr")
-Input = null
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2(0, 8)
