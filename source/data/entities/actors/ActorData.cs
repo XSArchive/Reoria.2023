@@ -10,6 +10,14 @@ public partial class ActorData : EntityData
     public ActorState State = ActorState.Idle;
     [Export]
     public Direction Direction = Direction.Down;
+
     [Export]
-    public float MovementSpeed = 16f;
+    public ActorStats Stats { get; protected set; }
+
+    public override void _Ready()
+    {
+        this.Stats = this.GetNode<ActorStats>("Stats");
+
+        base._Ready();
+    }
 }

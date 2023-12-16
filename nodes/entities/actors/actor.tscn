@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ch1f8cp4ydop3"]
+[gd_scene load_steps=9 format=3 uid="uid://ch1f8cp4ydop3"]
 
 [ext_resource type="PackedScene" uid="uid://bpimk7q8w2yji" path="res://nodes/entities/entity.tscn" id="1_aqt2q"]
 [ext_resource type="Script" path="res://source/nodes/entities/actors/Actor.cs" id="2_ypqkr"]
 [ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://assets/graphics/actors/timefantasy/$tf_template.png" id="3_173ve"]
 [ext_resource type="Script" path="res://source/data/entities/actors/ActorData.cs" id="3_oue1y"]
+[ext_resource type="Script" path="res://source/data/entities/actors/ActorStats.cs" id="4_0idrf"]
 [ext_resource type="Script" path="res://source/logic/entities/actors/ActorLogic.cs" id="4_lhjxb"]
 [ext_resource type="AnimationLibrary" uid="uid://bcw1ptjmuj4tn" path="res://data/animations/actor_animations.res" id="5_5a0jr"]
 [ext_resource type="Script" path="res://source/logic/entities/actors/ActorMovementLogic.cs" id="5_bqxgr"]
@@ -15,7 +16,9 @@ script = ExtResource("2_ypqkr")
 script = ExtResource("3_oue1y")
 State = 1
 Direction = 2
-MovementSpeed = 16.0
+
+[node name="Stats" type="Node" parent="Data" index="0"]
+script = ExtResource("4_0idrf")
 
 [node name="Logic" parent="." index="1"]
 script = ExtResource("4_lhjxb")

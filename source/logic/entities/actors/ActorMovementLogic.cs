@@ -22,7 +22,7 @@ public partial class ActorMovementLogic : Node2D
 
     public override void _PhysicsProcess(double delta)
     {
-        this.Owner.Velocity = this.Input * this.Owner.Data.MovementSpeed;
+        this.Owner.Velocity = this.Input * this.Owner.Data.Stats.Agility;
 
         this.Owner.Data.State = ActorState.Idle;
 
@@ -34,7 +34,7 @@ public partial class ActorMovementLogic : Node2D
             _ = this.Owner.MoveAndSlide();
         }
 
-        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.Data.State}_{this.Owner.Data.Direction}".ToLower(), 0, this.Owner.Data.MovementSpeed / 16f * 2);
+        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.Data.State}_{this.Owner.Data.Direction}".ToLower(), 0, this.Owner.Data.Stats.Agility / 16f * 2);
 
         base._PhysicsProcess(delta);
     }

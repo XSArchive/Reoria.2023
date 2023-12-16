@@ -7,9 +7,8 @@
 [node name="Player" instance=ExtResource("1_dwqr2")]
 script = ExtResource("2_qkny0")
 
-[node name="Data" parent="." index="0"]
-State = 1
-Direction = 2
+[node name="Stats" parent="Data" index="0"]
+Agility = 16
 
 [node name="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_gahfh")
