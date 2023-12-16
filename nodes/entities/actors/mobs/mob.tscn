@@ -7,9 +7,14 @@
 [node name="Mob" instance=ExtResource("1_cx4un")]
 script = ExtResource("2_7fiaf")
 
-[node name="Data" parent="." index="0"]
-State = 1
-Direction = 2
+[node name="Stats" parent="Data" index="0"]
+Strength = null
+Endurance = null
+Dexterity = null
+Agility = null
+Intelligence = null
+Spirit = null
+Luck = null
 
 [node name="Sprite2D" parent="." index="3"]
 texture = ExtResource("3_f87gj")

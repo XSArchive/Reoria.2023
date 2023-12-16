@@ -12,15 +12,14 @@ public partial class ActorData : EntityData
     public Direction Direction = Direction.Down;
 
     [Export]
-    public ActorVitals Vitals { get; protected set; }
-
+    public VitalsType Vitals { get; protected set; }
     [Export]
-    public ActorStats Stats { get; protected set; }
+    public StatsType Stats { get; protected set; }
 
     public override void _Ready()
     {
-        this.Vitals = this.GetNode<ActorVitals>("Vitals");
-        this.Stats = this.GetNode<ActorStats>("Stats");
+        this.Vitals = this.GetNode<VitalsType>("Vitals");
+        this.Stats = this.GetNode<StatsType>("Stats");
 
         base._Ready();
     }

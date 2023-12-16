@@ -4,7 +4,7 @@ using Reoria.Enumerations;
 
 namespace Reoria.Data.Entities.Actors;
 
-public partial class ActorVitals : EnumeratedType<Vitals, int>
+public partial class VitalsType : EnumeratedType<Vitals, int>
 {
     [Export]
     public int Health { get => this.GetValue(Vitals.Health); set => this.SetValue(Vitals.Health, value); }
@@ -13,5 +13,5 @@ public partial class ActorVitals : EnumeratedType<Vitals, int>
     [Export]
     public int Stamina { get => this.GetValue(Vitals.Stamina); set => this.SetValue(Vitals.Stamina, value); }
 
-    public ActorVitals() => _ = this.Populate();
+    public VitalsType() => _ = this.Populate();
 }

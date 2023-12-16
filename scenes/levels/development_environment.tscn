@@ -11,21 +11,8 @@ position = Vector2(65, 47)
 [node name="Mob" parent="." instance=ExtResource("2_i4h40")]
 position = Vector2(164, 103)
 
-[node name="Stats" parent="Mob/Data" index="0"]
-Agility = 8
-
 [node name="Mob2" parent="." instance=ExtResource("2_i4h40")]
 position = Vector2(47, 103)
 
-[node name="Stats" parent="Mob2/Data" index="0"]
-Agility = 16
-
 [node name="Mob3" parent="." instance=ExtResource("2_i4h40")]
 position = Vector2(134, 31)
-
-[node name="Stats" parent="Mob3/Data" index="0"]
-Agility = 32
-
-[editable path="Mob"]
-[editable path="Mob2"]
-[editable path="Mob3"]
