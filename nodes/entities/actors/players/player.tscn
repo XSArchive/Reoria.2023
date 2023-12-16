@@ -6,6 +6,15 @@
 
 [node name="Player" instance=ExtResource("1_dwqr2")]
 script = ExtResource("2_qkny0")
+State = null
+Direction = null
+
+[node name="Data" parent="." index="0"]
+GuidString = ""
+Position = Vector2(0, 0)
+
+[node name="Movement" parent="Logic" index="0"]
+Input = null
 
 [node name="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_gahfh")

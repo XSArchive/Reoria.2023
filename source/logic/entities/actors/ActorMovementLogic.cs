@@ -24,17 +24,17 @@ public partial class ActorMovementLogic : Node2D
     {
         this.Owner.Velocity = this.Input * this.Owner.Data.MovementSpeed;
 
-        this.Owner.State = ActorState.Idle;
+        this.Owner.Data.State = ActorState.Idle;
 
         if (this.Owner.Velocity != Vector2.Zero)
         {
-            this.Owner.State = ActorState.Moving;
-            this.Owner.Direction = CalculateDirectionFromVector2(this.Owner.Velocity);
+            this.Owner.Data.State = ActorState.Moving;
+            this.Owner.Data.Direction = CalculateDirectionFromVector2(this.Owner.Velocity);
 
             _ = this.Owner.MoveAndSlide();
         }
 
-        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.State}_{this.Owner.Direction}".ToLower(), 0, this.Owner.Data.MovementSpeed / 16f * 2);
+        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.Data.State}_{this.Owner.Data.Direction}".ToLower(), 0, this.Owner.Data.MovementSpeed / 16f * 2);
 
         base._PhysicsProcess(delta);
     }
