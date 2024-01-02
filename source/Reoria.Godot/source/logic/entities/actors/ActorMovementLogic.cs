@@ -34,7 +34,7 @@ public partial class ActorMovementLogic : Node2D
             _ = this.Owner.MoveAndSlide();
         }
 
-        this.Owner.AnimationPlayer.Play($"actor_animations/{this.Owner.Data.State}_{this.Owner.Data.Direction}".ToLower(), 0, this.Owner.Data.Stats.Agility / 16f * 2);
+        this.Owner.AnimationPlayer.Play($"ActorAnimations/{this.Owner.Data.State}{this.Owner.Data.Direction}", 0, this.Owner.Data.Stats.Agility / 16f * 2);
 
         base._PhysicsProcess(delta);
     }
