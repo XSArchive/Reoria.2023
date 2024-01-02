@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Reoria.Enumerations;
+namespace Reoria.Enumerations.Flags;
 
 [Flags]
 public enum DirectionFlags
