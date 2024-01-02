@@ -1,8 +1,6 @@
 ﻿using Godot;
-using System;
-using System.Collections.Generic;
 
-namespace Reoria.Data.Types;
+namespace Reoria.Godot.Data.Types;
 
 public abstract partial class EnumeratedType<TEnum, TValue> : Node where TEnum : Enum
 {

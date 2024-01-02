@@ -1,8 +1,7 @@
 ﻿using Godot;
-using Reoria.Data.Types;
 using Reoria.Enumerations;
 
-namespace Reoria.Data.Entities.Actors;
+namespace Reoria.Godot.Data.Types;
 
 public partial class StatsType : EnumeratedType<Stats, int>
 {
