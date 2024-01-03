@@ -3,7 +3,7 @@ using Reoria.Enumerations;
 using Reoria.Enumerations.Nodes.Entities.Actors;
 using Reoria.Godot.Data.Types;
 
-namespace Reoria.Data.Entities.Actors;
+namespace Reoria.Godot.Data.Entities.Actors;
 
 public partial class ActorData : EntityData
 {
