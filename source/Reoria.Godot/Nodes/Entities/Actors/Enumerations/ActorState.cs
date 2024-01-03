@@ -1,4 +1,4 @@
-﻿namespace Reoria.Enumerations.Nodes.Entities.Actors;
+﻿namespace Reoria.Godot.Nodes.Entities.Actors.Enumerations;
 
 public enum ActorState
 {

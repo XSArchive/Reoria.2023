@@ -1,7 +1,7 @@
 ﻿using Godot;
 using Reoria.Enumerations;
-using Reoria.Enumerations.Nodes.Entities.Actors;
 using Reoria.Godot.Data.Types;
+using Reoria.Godot.Nodes.Entities.Actors.Enumerations;
 using Reoria.Godot.Nodes.Entities.Data;
 
 namespace Reoria.Godot.Nodes.Entities.Actors.Data;

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Reoria.Enumerations.Nodes.Entities.Actors;
+﻿namespace Reoria.Godot.Nodes.Entities.Actors.Enumerations.Flags;
 
 [Flags]
 public enum ActorStateFlags
