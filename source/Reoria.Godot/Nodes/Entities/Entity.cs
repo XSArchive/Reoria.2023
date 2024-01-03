@@ -1,6 +1,6 @@
 using Godot;
 using Reoria.Godot.Data.Entities;
-using Reoria.Logic.Entities;
+using Reoria.Godot.Nodes.Entities.Logic;
 
 namespace Reoria.Godot.Nodes.Entities;
 

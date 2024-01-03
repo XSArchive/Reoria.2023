@@ -1,6 +1,7 @@
 ﻿using Godot;
+using Reoria.Godot.Nodes.Entities.Logic;
 
-namespace Reoria.Logic.Entities.Actors;
+namespace Reoria.Godot.Nodes.Entities.Actors.Logic;
 
 public partial class ActorLogic : EntityLogic
 {

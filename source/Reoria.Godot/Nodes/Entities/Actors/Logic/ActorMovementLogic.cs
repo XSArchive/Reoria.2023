@@ -3,7 +3,7 @@ using Reoria.Enumerations.Nodes.Entities.Actors;
 using Reoria.Godot.Nodes.Entities.Actors;
 using static Reoria.Extensions.Enumerations.DirectionExtensions;
 
-namespace Reoria.Logic.Entities.Actors;
+namespace Reoria.Godot.Nodes.Entities.Actors.Logic;
 
 public partial class ActorMovementLogic : Node2D
 {

@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace Reoria.Logic.Entities;
+namespace Reoria.Godot.Nodes.Entities.Logic;
 
 public partial class EntityLogic : Node
 {

@@ -5,9 +5,9 @@
 [ext_resource type="Script" path="res://Data/Entities/Actors/ActorData.cs" id="3_2tgd6"]
 [ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://Assets/Graphics/Actors/TimeFantasy/$tf_template.png" id="3_173ve"]
 [ext_resource type="Script" path="res://Data/Types/VitalsType.cs" id="4_bxhh3"]
-[ext_resource type="Script" path="res://source/logic/entities/actors/ActorLogic.cs" id="4_lhjxb"]
-[ext_resource type="Script" path="res://source/logic/entities/actors/ActorMovementLogic.cs" id="5_bqxgr"]
+[ext_resource type="Script" path="res://Nodes/Entities/Actors/Logic/ActorMovementLogic.cs" id="5_bqxgr"]
 [ext_resource type="Script" path="res://Data/Types/StatsType.cs" id="5_nyvyt"]
+[ext_resource type="Script" path="res://Nodes/Entities/Actors/Logic/ActorLogic.cs" id="6_ihhcd"]
 [ext_resource type="AnimationLibrary" uid="uid://bcw1ptjmuj4tn" path="res://Data/Animations/ActorAnimations.res" id="9_bx8qg"]
 
 [node name="Actor" instance=ExtResource("1_aqt2q")]
@@ -25,7 +25,7 @@ script = ExtResource("4_bxhh3")
 script = ExtResource("5_nyvyt")
 
 [node name="Logic" parent="." index="1"]
-script = ExtResource("4_lhjxb")
+script = ExtResource("6_ihhcd")
 
 [node name="Movement" type="Node2D" parent="Logic" index="0"]
 script = ExtResource("5_bqxgr")

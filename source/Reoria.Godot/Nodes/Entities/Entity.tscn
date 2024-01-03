@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Nodes/Entities/Entity.cs" id="1_hyrha"]
 [ext_resource type="Script" path="res://Data/Entities/EntityData.cs" id="2_hnnt2"]
-[ext_resource type="Script" path="res://source/logic/entities/EntityLogic.cs" id="3_0v2jj"]
+[ext_resource type="Script" path="res://Nodes/Entities/Logic/EntityLogic.cs" id="3_0v2jj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1uoft"]
 radius = 8.0
