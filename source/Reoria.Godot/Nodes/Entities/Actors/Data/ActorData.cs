@@ -2,8 +2,9 @@
 using Reoria.Enumerations;
 using Reoria.Enumerations.Nodes.Entities.Actors;
 using Reoria.Godot.Data.Types;
+using Reoria.Godot.Nodes.Entities.Data;
 
-namespace Reoria.Godot.Data.Entities.Actors;
+namespace Reoria.Godot.Nodes.Entities.Actors.Data;
 
 public partial class ActorData : EntityData
 {

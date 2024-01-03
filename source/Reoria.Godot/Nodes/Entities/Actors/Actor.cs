@@ -1,5 +1,5 @@
 using Godot;
-using Reoria.Godot.Data.Entities.Actors;
+using Reoria.Godot.Nodes.Entities.Actors.Data;
 using Reoria.Godot.Nodes.Entities.Actors.Logic;
 
 namespace Reoria.Godot.Nodes.Entities.Actors;

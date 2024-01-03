@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace Reoria.Godot.Data.Entities;
+namespace Reoria.Godot.Nodes.Entities.Data;
 
 public partial class EntityData : Node
 {
