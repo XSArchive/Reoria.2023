@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvof3kqgeqaq4"]
 
 [ext_resource type="PackedScene" uid="uid://ch1f8cp4ydop3" path="res://Nodes/Entities/Actors/Actor.tscn" id="1_dwqr2"]
-[ext_resource type="Texture2D" uid="uid://ctt8mpeudh3c6" path="res://assets/graphics/actors/timefantasy/chara1-0.png" id="2_gahfh"]
+[ext_resource type="Texture2D" uid="uid://ctt8mpeudh3c6" path="res://Assets/Graphics/Actors/TimeFantasy/chara1-0.png" id="2_gahfh"]
 [ext_resource type="Script" path="res://source/nodes/entities/actors/players/Player.cs" id="2_qkny0"]
 
 [node name="Player" instance=ExtResource("1_dwqr2")]
