@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Reoria.Nodes.Entities.Actors.Players;
+namespace Reoria.Godot.Nodes.Entities.Actors.Players;
 
 public partial class Player : Actor
 {

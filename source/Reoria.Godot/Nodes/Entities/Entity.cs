@@ -2,7 +2,7 @@ using Godot;
 using Reoria.Data.Entities;
 using Reoria.Logic.Entities;
 
-namespace Reoria.Nodes.Entities;
+namespace Reoria.Godot.Nodes.Entities;
 
 public partial class Entity : CharacterBody2D
 {

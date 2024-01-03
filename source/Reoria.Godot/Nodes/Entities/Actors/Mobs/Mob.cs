@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Reoria.Nodes.Entities.Actors.Mobs;
+namespace Reoria.Godot.Nodes.Entities.Actors.Mobs;
 
 public partial class Mob : Actor
 {

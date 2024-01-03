@@ -2,7 +2,7 @@ using Godot;
 using Reoria.Data.Entities.Actors;
 using Reoria.Logic.Entities.Actors;
 
-namespace Reoria.Nodes.Entities.Actors;
+namespace Reoria.Godot.Nodes.Entities.Actors;
 
 public partial class Actor : Entity
 {
