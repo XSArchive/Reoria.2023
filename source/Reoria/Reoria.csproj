@@ -5,10 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <BaseOutputPath>$(SolutionDir)bin\$(AssemblyName)</BaseOutputPath>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-
     <Title>$(AssemblyName)</Title>
     <Authors>XerShade</Authors>
     <Company>XerShade's Corner</Company>
