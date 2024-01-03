@@ -1,6 +1,6 @@
 ﻿using Godot;
 using Reoria.Godot.Nodes.Entities.Actors.Enumerations;
-using static Reoria.Extensions.Enumerations.DirectionExtensions;
+using static Reoria.Godot.Enumerations.Extensions.DirectionExtensions;
 
 namespace Reoria.Godot.Nodes.Entities.Actors.Logic;
 

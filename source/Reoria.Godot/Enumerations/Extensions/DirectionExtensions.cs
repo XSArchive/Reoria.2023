@@ -1,7 +1,7 @@
-﻿using Reoria.Enumerations;
-using Godot;
+﻿using Godot;
+using Reoria.Enumerations;
 
-namespace Reoria.Extensions.Enumerations;
+namespace Reoria.Godot.Enumerations.Extensions;
 
 public static class DirectionExtensions
 {
