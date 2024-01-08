@@ -1,8 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6bo2gtq8fo78"]
-
-[ext_resource type="PackedScene" uid="uid://601s7gbg8osi" path="res://Scenes/Levels/DevelopmentEnvironment.tscn" id="1_ldkoq"]
+[gd_scene format=3 uid="uid://c6bo2gtq8fo78"]
 
 [node name="GameContainer" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Development Environment" parent="." instance=ExtResource("1_ldkoq")]

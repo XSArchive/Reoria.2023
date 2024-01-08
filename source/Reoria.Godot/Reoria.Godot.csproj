@@ -55,8 +55,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Reoria\Reoria.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Nodes\Entities\Actors\Data\" />
-    <Folder Include="Nodes\Entities\Data\" />
-  </ItemGroup>
 </Project>
