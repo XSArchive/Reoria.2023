@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6bo2gtq8fo78"]
+[gd_scene load_steps=5 format=3 uid="uid://c6bo2gtq8fo78"]
 
 [ext_resource type="Script" path="res://Scenes/GameContainer.cs" id="1_m4te2"]
 [ext_resource type="PackedScene" uid="uid://c2qbyxpnroho5" path="res://Nodes/Core/Camera.tscn" id="2_733o6"]
+[ext_resource type="PackedScene" uid="uid://qvujour276ny" path="res://Nodes/Entities/Players/Player.tscn" id="3_50fph"]
 [ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://Assets/Graphics/Actors/TimeFantasy/$tf_template.png" id="3_v1i6x"]
 
 [node name="GameContainer" type="Node"]
 script = ExtResource("1_m4te2")
 
 [node name="Camera" parent="." instance=ExtResource("2_733o6")]
+
+[node name="Player" parent="." instance=ExtResource("3_50fph")]
+position = Vector2(80, 60)
 
 [node name="TestNodes" type="Node" parent="."]
 
