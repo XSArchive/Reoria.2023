@@ -1,44 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6bo2gtq8fo78"]
+[gd_scene load_steps=7 format=3 uid="uid://c6bo2gtq8fo78"]
 
 [ext_resource type="Script" path="res://Scenes/GameContainer.cs" id="1_m4te2"]
 [ext_resource type="PackedScene" uid="uid://c2qbyxpnroho5" path="res://Nodes/Core/Camera.tscn" id="2_733o6"]
 [ext_resource type="PackedScene" uid="uid://qvujour276ny" path="res://Nodes/Entities/Players/Player.tscn" id="3_50fph"]
-[ext_resource type="Texture2D" uid="uid://btk2ebp72kn4" path="res://Assets/Graphics/Actors/TimeFantasy/$tf_template.png" id="3_v1i6x"]
+[ext_resource type="PackedScene" uid="uid://clk5087vvealq" path="res://Nodes/Entities/KinematicEntity.tscn" id="4_bbnp1"]
+[ext_resource type="PackedScene" uid="uid://dnlubgmalvks6" path="res://Nodes/Entities/RigidEntity.tscn" id="5_o20mw"]
+[ext_resource type="PackedScene" uid="uid://ctkq7173c5na4" path="res://Nodes/Entities/StaticEntity.tscn" id="6_6gfpr"]
 
 [node name="GameContainer" type="Node"]
 script = ExtResource("1_m4te2")
 
 [node name="Camera" parent="." instance=ExtResource("2_733o6")]
 
-[node name="Player" parent="." instance=ExtResource("3_50fph")]
+[node name="Nodes" type="Node" parent="."]
+
+[node name="Player" parent="Nodes" instance=ExtResource("3_50fph")]
 position = Vector2(80, 60)
 
-[node name="TestNodes" type="Node" parent="."]
+[node name="KinematicEntity" parent="Nodes" instance=ExtResource("4_bbnp1")]
+position = Vector2(170, 112)
 
-[node name="Sprite2D" type="Sprite2D" parent="TestNodes"]
-position = Vector2(589, 312)
-texture = ExtResource("3_v1i6x")
-hframes = 3
-vframes = 4
-frame = 1
+[node name="RigidEntity" parent="Nodes" instance=ExtResource("5_o20mw")]
+position = Vector2(230, 40)
 
-[node name="Sprite2D2" type="Sprite2D" parent="TestNodes"]
-position = Vector2(305, 268)
-texture = ExtResource("3_v1i6x")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="Sprite2D3" type="Sprite2D" parent="TestNodes"]
-position = Vector2(481, 34)
-texture = ExtResource("3_v1i6x")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="Sprite2D4" type="Sprite2D" parent="TestNodes"]
-position = Vector2(214, 103)
-texture = ExtResource("3_v1i6x")
-hframes = 3
-vframes = 4
-frame = 1
+[node name="StaticEntity" parent="Nodes" instance=ExtResource("6_6gfpr")]
+position = Vector2(319, 108)
