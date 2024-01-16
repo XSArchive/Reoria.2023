@@ -6,7 +6,7 @@ namespace Reoria.Godot.Nodes.Entities;
 /// <summary>
 /// Defines the properties and functions of entity nodes that inherit from <see cref="StaticBody2D"/>.
 /// </summary>
-public partial class StaticEntity : StaticBody2D, IEntity
+public partial class StaticEntity : StaticBody2D, IStaticEntity
 {
 	/// <summary>
 	/// A node that provides a <see cref="Shape2D"/> to a <see cref="CollisionObject2D"/> parent and

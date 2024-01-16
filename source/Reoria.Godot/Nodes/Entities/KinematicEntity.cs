@@ -6,7 +6,7 @@ namespace Reoria.Godot.Nodes.Entities;
 /// <summary>
 /// Defines the properties and functions of entity nodes that inherit from <see cref="CharacterBody2D"/>.
 /// </summary>
-public partial class KinematicEntity : CharacterBody2D, IEntity
+public partial class KinematicEntity : CharacterBody2D, IKinematicEntity
 {
 	/// <summary>
 	/// A node that provides a <see cref="Shape2D"/> to a <see cref="CollisionObject2D"/> parent and
