@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://c58fthcegyvxn"]
+
+[ext_resource type="PackedScene" uid="uid://cpr20urae27ir" path="res://Nodes/Entities/Actors/Actor.tscn" id="1_wi6jl"]
+[ext_resource type="Texture2D" uid="uid://ctt8mpeudh3c6" path="res://Assets/Graphics/Actors/TimeFantasy/chara1-0.png" id="2_1h14l"]
+[ext_resource type="Script" path="res://Nodes/Entities/Actors/Players/Player.cs" id="2_tbqxo"]
+
+[node name="Player" instance=ExtResource("1_wi6jl")]
+script = ExtResource("2_tbqxo")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_1h14l")

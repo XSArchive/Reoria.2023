@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/GameContainer.cs" id="1_m4te2"]
 [ext_resource type="PackedScene" uid="uid://c2qbyxpnroho5" path="res://Nodes/Core/Camera.tscn" id="2_733o6"]
-[ext_resource type="PackedScene" uid="uid://qvujour276ny" path="res://Nodes/Entities/Players/Player.tscn" id="3_50fph"]
+[ext_resource type="PackedScene" uid="uid://c58fthcegyvxn" path="res://Nodes/Entities/Actors/Players/Player.tscn" id="3_2eybq"]
 [ext_resource type="PackedScene" uid="uid://clk5087vvealq" path="res://Nodes/Entities/KinematicEntity.tscn" id="4_bbnp1"]
 [ext_resource type="PackedScene" uid="uid://dnlubgmalvks6" path="res://Nodes/Entities/RigidEntity.tscn" id="5_o20mw"]
 [ext_resource type="PackedScene" uid="uid://ctkq7173c5na4" path="res://Nodes/Entities/StaticEntity.tscn" id="6_6gfpr"]
@@ -14,8 +14,8 @@ script = ExtResource("1_m4te2")
 
 [node name="Nodes" type="Node" parent="."]
 
-[node name="Player" parent="Nodes" instance=ExtResource("3_50fph")]
-position = Vector2(80, 60)
+[node name="Player" parent="Nodes" instance=ExtResource("3_2eybq")]
+position = Vector2(149, 45)
 
 [node name="KinematicEntity" parent="Nodes" instance=ExtResource("4_bbnp1")]
 position = Vector2(170, 112)

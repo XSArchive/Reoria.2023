@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://qvujour276ny"]
-
-[ext_resource type="PackedScene" uid="uid://clk5087vvealq" path="res://Nodes/Entities/KinematicEntity.tscn" id="1_jkwtt"]
-[ext_resource type="Script" path="res://Nodes/Entities/Players/Player.cs" id="2_85lpq"]
-
-[node name="Player" instance=ExtResource("1_jkwtt")]
-script = ExtResource("2_85lpq")
