@@ -4,7 +4,7 @@ using Reoria.Nodes.Entities.Interfaces;
 namespace Reoria.Godot.Nodes.Entities;
 
 /// <summary>
-/// Defines the properties and functions of entity nodes that inherit from <see cref="StaticBody2D"/>.
+/// Defines the properties and functions of nodes that inherit from <see cref="StaticBody2D"/>.
 /// </summary>
 public partial class StaticEntity : StaticBody2D, IStaticEntity
 {
@@ -23,7 +23,7 @@ public partial class StaticEntity : StaticBody2D, IStaticEntity
 	/// </summary>
 	public override void _Ready()
 	{
-		// Fetch and assign the owner node variable.
+		// Fetch and assign the child node variables.
 		this.CollisionShape = this.GetNode<CollisionShape2D?>("CollisionShape");
 
 		// Pass to the base class' function.

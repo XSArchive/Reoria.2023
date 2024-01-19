@@ -2,7 +2,10 @@ using Reoria.Nodes.Entities.Actors.Players.Interfaces;
 
 namespace Reoria.Godot.Nodes.Entities.Actors.Players;
 
-public partial class Player : KinematicEntity, IPlayer
+/// <summary>
+/// Defines the properties and functions of nodes that are controlled by players.
+/// </summary>
+public partial class Player : Actor, IPlayer
 {
 
 }

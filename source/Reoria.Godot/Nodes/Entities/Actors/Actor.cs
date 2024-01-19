@@ -3,6 +3,9 @@ using Reoria.Nodes.Entities.Actors.Players.Interfaces;
 
 namespace Reoria.Godot.Nodes.Entities.Actors.Players;
 
+/// <summary>
+/// Defines the properties and functions of nodes that are considered actors in the game world.
+/// </summary>
 public partial class Actor : KinematicEntity, IActor
 {
     /// <summary>
@@ -19,7 +22,7 @@ public partial class Actor : KinematicEntity, IActor
     /// </summary>
     public override void _Ready()
     {
-        // Fetch and assign the owner node variable.
+        // Fetch and assign the child node variables.
         this.Sprite = this.GetNode<Sprite2D?>("Sprite");
 
         // Pass to the base class' function.

@@ -22,8 +22,8 @@ public partial class Camera : Camera2D, IOwnerPattern<GameContainer>
 	/// </summary>
 	public override void _Ready()
 	{
-		// Fetch and assign the owner node variable.
-		this.Owner = this.GetOwner<GameContainer>();
+        // Fetch and assign the child node variables.
+        this.Owner = this.GetOwner<GameContainer>();
 
 		// Pass to the base class' function.
 		base._Ready();

@@ -11,5 +11,5 @@ public interface INodeWithSprite
     /// A node that displays a 2D texture. The texture displayed can be a region from
     /// a larger atlas texture, or a frame from a sprite sheet animation.
     /// </summary>
-    Sprite2D Sprite { get; }
+    Sprite2D? Sprite { get; }
 }
