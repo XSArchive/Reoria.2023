@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reoria.Godot", "source\Reor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{B8FEC288-B8AC-4365-8E80-559030F5EF33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reoria", "source\Reoria\Reoria.csproj", "{39A84D21-12D3-4893-A498-87F88EC9F609}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reoria", "source\Reoria\Reoria.csproj", "{39A84D21-12D3-4893-A498-87F88EC9F609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reoria.Game", "source\Reoria.Game\Reoria.Game.csproj", "{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,14 @@ Global
 		{39A84D21-12D3-4893-A498-87F88EC9F609}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
 		{39A84D21-12D3-4893-A498-87F88EC9F609}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A84D21-12D3-4893-A498-87F88EC9F609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{82D3C922-15FA-4759-985E-896F44A5701F} = {B8FEC288-B8AC-4365-8E80-559030F5EF33}
 		{39A84D21-12D3-4893-A498-87F88EC9F609} = {B8FEC288-B8AC-4365-8E80-559030F5EF33}
+		{B1C9002E-ECEC-421B-90FD-0FDE6ACB1C07} = {B8FEC288-B8AC-4365-8E80-559030F5EF33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03628FA3-A83A-4A36-8749-12781B3BB4A4}
