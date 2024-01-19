@@ -1,7 +1,6 @@
 ﻿using Godot;
-using Reoria.Nodes.Interfaces;
 
-namespace Reoria.Nodes.Entities.Interfaces;
+namespace Reoria.Nodes.Entitites;
 
 /// <summary>
 /// Provides a common properties and functions for Entity <see cref="Node"/>s.

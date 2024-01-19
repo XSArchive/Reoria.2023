@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace Reoria.Nodes.Interfaces;
+namespace Reoria.Nodes;
 
 /// <summary>
 /// Provides a common properties and functions for a <see cref="Node"/> with a <see cref="CollisionShape2D"/>.

@@ -1,4 +1,4 @@
-using Reoria.Nodes.Entities.Actors.Players.Interfaces;
+using Reoria.Nodes.Entitites.Actors.Players;
 
 namespace Reoria.Godot.Nodes.Entities.Actors.Players;
 
