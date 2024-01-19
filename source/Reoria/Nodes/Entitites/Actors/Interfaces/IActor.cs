@@ -1,8 +1,8 @@
 ﻿using Godot;
-using Reoria.Godot.Nodes.Entities.Interfaces;
-using Reoria.Godot.Nodes.Interfaces;
+using Reoria.Nodes.Entities.Interfaces;
+using Reoria.Nodes.Interfaces;
 
-namespace Reoria.Godot.Nodes.Entities.Actors.Players.Interfaces;
+namespace Reoria.Nodes.Entities.Actors.Players.Interfaces;
 
 /// <summary>
 /// Provides a common properties and functions for <see cref="Actor"/> <see cref="Node"/>s.
